@@ -8,8 +8,11 @@ function checkNumberType(num) {
   }
 }
 
-let userInput = prompt("Please enter a number:"); 
-
-let convertedNumber = Number(userInput); //converts to num
-
-console.log(checkNumberType(convertedNumber));
+let userInput; 
+do {
+  userInput = prompt("Enter a number:");
+  if (userInput !== "stop") {
+    let convertedNumber = Number(userInput);
+    console.log(checkNumberType(convertedNumber));
+  }
+} while (userInput !== "stop"); 
